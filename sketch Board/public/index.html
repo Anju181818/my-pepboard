@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-UA-compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="device wclassth-device, initial-scale 1.0"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Openboard clone</title>
+
+</head>
+
+<body>
+    <div class="options-cont">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <img  class="pencil"src="file:///C:/Users/anju3/Downloads/1410828541.svg">
+        <img  class="earser"src="file:///C:/Users/anju3/Downloads/eraser-icon.svg">
+        <img  class="download"src="file:///C:/Users/anju3/Downloads/GS_Download_icon.svg">
+        <img  class="upload"src="file:///C:/Users/anju3/Downloads/Upload-icon.svg">
+        <img  class="sticky"src="file:///C:/Users/anju3/Downloads/sticky-note-icon.svg">
+        <img  class="redo"src="file:///C:/Users/anju3/Downloads/ftredo.svg">
+        <img  class="undo"src="file:///C:/Users/anju3/Downloads/rodentia-icons_edit-undo.svg">
+    </div>
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-container">
+            <input type="range" max="10" min="2" value="3" class="pencil-width">
+        </div>
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+        </div>
+    </div>
+    <div class="earser-tool-cont">
+        <input type="range" min="2" max="10" value="3" class="eraser-width">
+    </div>
+    <!-- <div class="sticky-note">
+        <div class="header-cont">
+            <div class="minimize"></div>
+            <div class="remove"></div>
+        </div>
+        <div class="note-cont">
+            <textarea ></textarea> 
+        </div>
+
+    </div> -->
+    <canvas></canvas>
+     <script src="https://cdn.socket.io/4.2.0/socket.io.min.js" integrity="sha384-PiBR5S00EtOj2Lto9Uu81cmoyZqR57XcOna1oAuVuIEjzj0wpqDVfD0JA9eXlRsj" 
+     crossorigin="anonymous"></script> 
+    <script>
+        let socket=io.connect("http://localhost:5000/index.html");
+    </script>
+    <!-- <script src="./tools.js"></script>
+    <script src="./canvas.js"></script> -->
+    <script src="./tools.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+
+</html>
